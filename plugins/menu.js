@@ -40,6 +40,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'sticker': 'Sticker',
       'kerang': 'Kerang Ajaib',
       'quotes': 'Quotes',
+      'weebs': 'Weebs',
       'admin': 'Admin',
       'group': 'Group',
       'internet': 'Internet',
