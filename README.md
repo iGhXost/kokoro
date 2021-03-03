@@ -36,4 +36,5 @@ Simple WhatsApp Bot
 --------------
 
 ##### Powered By : [`XTEAM`](https://api.xteam.xyz) 
-##### Thanks to : [`Nurutomo`](https://GitHub.com/Nurutomo) 
+#### Thanks to : 
+[`Nurutomo`](https://GitHub.com/Nurutomo) 
