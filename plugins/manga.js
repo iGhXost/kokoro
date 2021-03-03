@@ -26,7 +26,7 @@ let handler = async m => m.reply(`
 ┗━━━━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['manga']
-handler.tags = ['Weebs']
+handler.tags = ['weebs']
 handler.command = /^ma(nga|nhwa)$/i
 
 module.exports = handler
