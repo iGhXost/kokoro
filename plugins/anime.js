@@ -43,7 +43,7 @@ let handler = async m => m.reply(`
 ┗━━━━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['anime']
-handler.tags = ['Weebs']
+handler.tags = ['weebs']
 handler.command = /^anime$/i
 
 module.exports = handler
