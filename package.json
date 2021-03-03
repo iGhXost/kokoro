@@ -1,6 +1,6 @@
 {
   "name": "kokoro",
-  "version": "1.0.0 Beta",
+  "version": "1.0.0",
   "description": "Customizable WhatsApp Bot",
   "depecrated": false,
   "main": "index.js",
