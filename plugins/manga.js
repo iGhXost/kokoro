@@ -25,7 +25,7 @@ let handler = async m => m.reply(`
 ┣ ❖ https://mgkomik.my.id
 ┗━━━━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
-handler.help = ['manga']
+handler.help = ['manga',']
 handler.tags = ['weebs']
 handler.command = /^ma(nga|nhwa)$/i
 
