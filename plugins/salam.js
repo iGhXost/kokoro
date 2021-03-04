@@ -5,8 +5,8 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['salam']
 handler.tags = ['salam']
-handler.customPrefix = /($)/
-handler.command = /^assalamualaikum|samlekom$/i
+handler.customPrefix = /(\m$)/
+handler.command = /^assalamualaiku|samleko$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
