@@ -1,5 +1,5 @@
 let handler = async m => m.reply(`
-┏━「 Manga」
+┏━━━━「 Manga」
 ┣ ❖ https://mangatx.com
 ┣ ❖ https://komikcast.com
 ┣ ❖ https://komiku.id
