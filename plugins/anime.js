@@ -1,5 +1,5 @@
 let handler = async m => m.reply(`
-┏━「 Anime」
+┏━━━━「 Anime」
 ┣ ❖ https://kusonime.com
 ┣ ❖ https://anoboy.media
 ┣ ❖ https://oploverzz.net
