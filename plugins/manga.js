@@ -23,7 +23,7 @@ let handler = async m => m.reply(`
 ┣ ❖ https://mangaku.pro
 ┣ ❖ https://boosei.com
 ┣ ❖ https://mgkomik.my.id
-┗━━━━━━━━
+┗━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['manga','manhwa']
 handler.tags = ['weebs']
