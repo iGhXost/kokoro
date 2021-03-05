@@ -4,7 +4,7 @@ let handler = async m => m.reply(`
 ┣ ❖ Tri  [0895361677059]
 ┣ ❖ Dana|GoPay|OVO 
 ┣ ❖ [0895361677059]
-┗━━━━━━━━━━
+┗━━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['donasi']
 handler.tags = ['info']
