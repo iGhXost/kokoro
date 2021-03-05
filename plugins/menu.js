@@ -38,9 +38,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'main': 'Main',
       'xp': 'Exp & Limit',
       'sticker': 'Sticker',
+      'weebs': 'Weebs'
       'kerang': 'Kerang Ajaib',
       'quotes': 'Quotes',
-      'weebs': 'Weebs',
       'admin': 'Admin',
       'group': 'Group',
       'internet': 'Internet',
@@ -84,15 +84,15 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣ ❖ Tanggal: *%week %weton, %date*
 ┣ ❖ Waktu: *%time*
 ┃
-┣ ❖ Uptime: _%uptime_ ( *%muptime* )
+┣ ❖ Uptime: *_%uptime_ (%muptime)*
 ┣ ❖ Database: %rtotalreg of %totalreg
 ┣ ❖ Github:
 ┃ %github
-┗━━━━━━━━━━
+┗━━━━━━━━
 %readmore`
     let header = conn.menu.header || '┏━━━━「 %category 」'
-    let body   = conn.menu.body   || '┣ ❖ %cmd%islimit'
-    let footer = conn.menu.footer || '┗━━━━━━━━━━\n'
+    let body   = conn.menu.body   || '┣ ❖  %cmd%islimit'
+    let footer = conn.menu.footer || '┗━━━━━━━━\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
