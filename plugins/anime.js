@@ -31,6 +31,7 @@ let handler = async m => m.reply(`
 ┣ ❖ https://naruchiha.id
 ┣ ❖ https://gantzid.com
 ┣ ❖ https://animekompi.web.id
+┣ ❖ https://www.pandanime.online
 ┣ ❖ https://Koenime.com
 ┣ ❖ https://moenime.web.id
 ┣ ❖ https://nontonanimeid.com
