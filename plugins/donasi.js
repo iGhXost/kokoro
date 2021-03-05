@@ -1,7 +1,7 @@
 let handler = async m => m.reply(`
 ┏━━━━「 Donasi 」
 ┣ ❖ by.U [085156381082]
-┣ ❖ Tri  [0895361677059]
+┣ ❖ Tri    [0895361677059]
 ┣ ❖ Dana|GoPay|OVO 
 ┣ ❖ [0895361677059]
 ┗━━━━━━━━
