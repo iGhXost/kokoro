@@ -40,7 +40,7 @@ let handler = async m => m.reply(`
 ┣ ❖ https://kazefuri.net
 ┣ ❖ https://haruzorasubs.net
 ┣ ❖ https://myanimelist.net
-┗━━━━━━
+┗━━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['anime']
 handler.tags = ['weebs']
