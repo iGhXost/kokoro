@@ -1,6 +1,6 @@
 {
-  "name": "kokoro",
-  "version": "1.0.0",
+  "name": "kororo",
+  "version": "1.1.0",
   "description": "Customizable WhatsApp Bot",
   "depecrated": false,
   "main": "index.js",
@@ -19,17 +19,17 @@
     "whatsapp",
     "js-whatsapp"
   ],
-  "homepage": "https://github.com/Kokoronationz/kokoro",
+  "homepage": "https://github.com/Kokoronationz/kororo",
   "author": {
     "name": "Kokoronationz"
   },
   "repository": {
-    "url": "https://github.com/Kokoronationz/kokoro.git"
+    "url": "https://github.com/Kokoronationz/kororo.git"
   },
   "bugs": {
-    "url": "https://github.com/Kokoronationz/kokoro/issues"
+    "url": "https://github.com/Kokoronationz/kororo/issues"
   },
-  "license": "GPL-3.0",
+  "license": "GPLv3",
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1",
     "awesome-phonenumber": "^2.45.0",
