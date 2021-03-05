@@ -19,7 +19,7 @@ Daftar berhasil!
 ┣ ❖ Nama: ${name}
 ┣ ❖ Umur: ${age} tahun
 ┣ ❖ SN: ${sn}
-┗━━━━━━━━
+┗━━━━━━━
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>|<umur>')
