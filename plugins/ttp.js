@@ -9,7 +9,7 @@ let handler  = async (m, { conn, text }) => {
     })
   }
 }
-handler.help = ['ttp <teks>']
+handler.help = ['ttp <teks>[limit]']
 handler.tags = ['sticker']
 handler.command = /^ttp$/i
 handler.owner = false
@@ -22,6 +22,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
+handler.limit = true
 
 module.exports = handler
 
