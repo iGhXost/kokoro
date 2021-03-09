@@ -6,7 +6,7 @@ let handler  = async (m, { conn, text }) => {
   if (text) conn.sendFile(m.chat, global.API('xteam', '/attp', { file: '', text }), 'attp.webp', '', m, false, { asSticker: true })
   else throw 'Uhm...Teksnya?'
 }
-handler.help = ['attp <teks>']
+handler.help = ['attp <teks>[limit]']
 handler.tags = ['sticker']
 handler.command = /^attp$/i
 handler.owner = false
@@ -19,6 +19,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
+handler.limit = true
 
 module.exports = handler
 
