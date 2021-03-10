@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[20]) throw 'Uhm...url nya mana?'
+  if (!args[200]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/ig', {
-    url: args[20]
+    url: args[200]
   }, '0148bbad1a10b740'))
   if (res.status !== 200) throw await res.text()
   let json = await res.json()
