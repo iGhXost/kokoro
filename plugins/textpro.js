@@ -20,5 +20,8 @@ handler.tags = ['tools']
 handler.command = /^(textpro)$/i
 handler.register = true
 
+handler.fail = null
+handler.limit = true
+
 module.exports = handler
 
