@@ -15,7 +15,7 @@ let handler  = async (m, { conn, args }) => {
     })
   }
 }
-handler.help = ['sticker (caption|reply media)', 'sticker <url>']
+handler.help = ['sticker (reply media)', 'sticker <url>']
 handler.tags = ['sticker']
 handler.command = /^s|s(tiker|ticker)$/i
 handler.owner = false
@@ -23,6 +23,7 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
+handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
