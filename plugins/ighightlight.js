@@ -20,4 +20,7 @@ handler.tags = ['downloader']
 handler.command = /^(ighighlight?)$/i
 handler.register = true
 
+handler.fail = null
+handler.limit = true
+
 module.exports = handler
