@@ -15,7 +15,7 @@ let handler  = async (m, { conn, args }) => {
     })
   }
 }
-handler.help = ['stiker (caption|reply media)', 'stiker <url>']
+handler.help = ['sticker (caption|reply media)', 'sticker <url>']
 handler.tags = ['sticker']
 handler.command = /^s|s(tiker|ticker)$/i
 handler.owner = false
