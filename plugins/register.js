@@ -20,6 +20,7 @@ Daftar berhasil!
 ┣ ❖ Umur: ${age} tahun
 ┣ ❖ SN: ${sn}
 ┗━━━━━━━
+
 _Amankan Serial Number anda_
 `.trim())
 }
