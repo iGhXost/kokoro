@@ -46,5 +46,6 @@ let handler = async m => m.reply(`
 handler.help = ['anime']
 handler.tags = ['weebs']
 handler.command = /^anime$/i
+handler.register = true
 
 module.exports = handler
