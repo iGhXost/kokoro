@@ -25,9 +25,11 @@ _#Enjoy..._
 
 *Thanks to*
 Nurutomo
+St4rz
 Arya274
+Gimenz.id
 MFarelS
-Bintang Nur Pradana
+Nezuko
 `.trim(), m)
 }
 handler.help = ['tutorial']
