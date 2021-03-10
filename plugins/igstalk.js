@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[100]) throw 'Uhm...username nya mana?'
+  if (!args[200]) throw 'Uhm...username nya mana?'
   let res = await fetch(global.API('xteam', '/dl/igstalk', {
-    nama: args[100]
+    nama: args[200]
   }, '7af5141d99649c4d'))
   let json = await res.json()
   if (res.status != 200) throw json
