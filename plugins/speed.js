@@ -9,4 +9,5 @@ handler.help = ['ping', 'speed']
 handler.tags = ['info', 'tools']
 
 handler.command = /^(ping|speed)$/i
+handler.register = true
 module.exports = handler
