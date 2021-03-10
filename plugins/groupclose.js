@@ -12,12 +12,12 @@ let handler = async (m, { conn, args, usedPrefix }) => {
         conn.fakeReply(m.chat, `*Grup berhasil ditutup!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
     } else if (args[0] === 'buka') {
         conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, false)
-        conn.fakeReply(m.chat, `*Grup berhasil dibuka!*`, '0@s.whatsapp.net', `*${conn.user.name} Verified Bot*`, m.chat)
+        conn.fakeReply(m.chat, `*Grup berhasil dibuka!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
     } else if (args[0] === 'tutup') {
         conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, true)
-        conn.fakeReply(m.chat, `*Grup berhasil ditutup!*`, '0@s.whatsapp.net', `*${conn.user.name} Verified Bot*`, m.chat)
+        conn.fakeReply(m.chat, `*Grup berhasil ditutup!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
     } else {
-        conn.fakeReply(m.chat, `*Contoh : ${usedPrefix}grup tutup*`, '0@s.whatsapp.net', `*${conn.user.name} Verified Bot*`, m)
+        conn.fakeReply(m.chat, `*Contoh : ${usedPrefix}grup tutup*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m)
     }
 }
 
