@@ -13,5 +13,6 @@ handler.help = ['delete']
 handler.tags = ['info']
 
 handler.command = /^d(el|elete)?$/i
+handler.register = true
 
 module.exports = handler
