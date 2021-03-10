@@ -10,5 +10,6 @@ handler.help = ['mention <teks>']
 handler.tags = ['tools']
 
 handler.command = /^mention$/i
+handler.register = true
 
 module.exports = handler
