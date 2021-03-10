@@ -9,7 +9,7 @@ Syarat dan Ketentuan Bot *KAMI*
 5. Jika menemukan Bug/Error silahkan langsung lapor ke Owner bot
 6. Juga kalau kalian ingin buat TUTORIAL BOT Langsung Lewat
      ➥ YouTube: https://www.youtube.com/c/DrawlNag
-7. Apapun yang anda perintah pada bot ini, KAMI TIDAK AKAN BERTANGGUNG JAWAB!
+7. Apapun yang anda perintah pada bot ini, *KAMI TIDAK AKAN BERTANGGUNG JAWAB!*
 
 *Thanks !*
 `.trim(), m)
@@ -22,6 +22,7 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
+handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
