@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/tiktok', {
-    url: args[200]
+    url: args[0]
   }, '7af5141d99649c4d'))
   let json = await res.json()
   conn.sendFile(m.chat, json.result.url, 'tiktok.mp4', `
