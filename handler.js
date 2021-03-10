@@ -280,9 +280,6 @@ module.exports = {
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
-
-Untuk mematikan fitur ini, ketik
-*.enable delete*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
