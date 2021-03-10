@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/tiktok', {
     url: args[0]
-  }, '7af5141d99649c4d'))
+  }, 'APIKEY'))
   let json = await res.json()
   conn.sendFile(m.chat, json.result.url, 'tiktok.mp4', `
 _*Username:*_ @${json.result.username}
