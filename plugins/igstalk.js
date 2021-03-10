@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[200]) throw 'Uhm...username nya mana?'
+  if (!args[0]) throw 'Uhm...username nya mana?'
   let res = await fetch(global.API('xteam', '/dl/igstalk', {
-    nama: args[200]
+    nama: args[0]
   }, '7af5141d99649c4d'))
   let json = await res.json()
   if (res.status != 200) throw json
@@ -37,5 +37,6 @@ handler.help = ['igstalk'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 
 handler.command = /^(igstalk)$/i
+handler.register = true
 
 module.exports = handler
