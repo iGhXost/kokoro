@@ -9,5 +9,6 @@ let handler = async m => m.reply(`
 handler.help = ['donasi']
 handler.tags = ['info']
 handler.command = /^dona(te|si)$/i
+handler.register = true
 
 module.exports = handler
