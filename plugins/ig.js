@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
   if (!args[200]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/ig', {
     url: args[200]
-  }, '0148bbad1a10b740'))
+  }, '7af5141d99649c4d'))
   if (res.status !== 200) throw await res.text()
   let json = await res.json()
   if (!json.result) throw json
