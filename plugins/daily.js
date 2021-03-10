@@ -13,11 +13,12 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
+handler.unreg = true
 
 handler.admin = false
 handler.botAdmin = false
 
-handler.fail = unreg
+handler.fail = null
 handler.exp = 0
 
 module.exports = handler
