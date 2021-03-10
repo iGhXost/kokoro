@@ -17,4 +17,7 @@ handler.tags = ['downloader']
 handler.command = /^(tiktok(dl)?)$/i
 handler.register = true
 
+handler.fail = null
+handler.limit = true
+
 module.exports = handler
