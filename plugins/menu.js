@@ -89,7 +89,16 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣ ❖ Github:
 ┃ %github
 ┗━━━━━━━
-%readmore`
+%readmore
+
+┏━━━━「 Thanks to」
+┣ ❖ Nurutomo
+┣ ❖ St4rz
+┣ ❖ Arya274
+┣ ❖ Gimenz.id
+┣ ❖ MFarelS
+┣ ❖ Nezuko
+┗━━━━━━━`
     let header = conn.menu.header || '┏━━━━「 %category 」'
     let body   = conn.menu.body   || '┣ ❖  %cmd%islimit'
     let footer = conn.menu.footer || '┗━━━━━━━\n'
