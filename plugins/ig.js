@@ -1,8 +1,8 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[200]) throw 'Uhm...url nya mana?'
+  if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/ig', {
-    url: args[200]
+    url: args[0]
   }, '7af5141d99649c4d'))
   if (res.status !== 200) throw await res.text()
   let json = await res.json()
@@ -21,5 +21,6 @@ handler.help = ['ig'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
 handler.command = /^(ig(dl)?)$/i
+handler.register = true
 
 module.exports = handler
