@@ -21,7 +21,7 @@ let handler = async (m, { conn, args, usedPrefix }) => {
     }
 }
 
-handler.help = ['group <open/losee>']
+handler.help = ['group <open/close>']
 handler.tags = ['group']
 handler.command = /^(group|grup)$/i
 handler.owner = false
