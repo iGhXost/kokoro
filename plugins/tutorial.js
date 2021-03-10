@@ -21,7 +21,13 @@ Penginstalannya :)
 
 Tinggal Scan QR code nya
 
-_*#Enjoy...*_
+_#Enjoy..._
+
+*Thanks to*
+Nurutomo
+Arya274
+MFarelS
+Bintang Nur Pradana
 `.trim(), m)
 }
 handler.help = ['tutorial']
@@ -32,6 +38,7 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
+handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
