@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Uhm...url nya mana?'
   let res = await fetch(global.API('xteam', '/dl/ighighlight', {
     nama: args[0]
-  }, '7af5141d99649c4d'))
+  }, 'APIKEY'))
   let json = await res.json()
   if (json.result.error) throw json.result.message
   let { username, items } = json.result
