@@ -6,7 +6,7 @@ handler.before = m => {
   let chat = global.DATABASE.data.chats[m.chat]
   let isGroupLink = linkRegex.exec(m.text)
 
-  if (chat.antiLink && isGroupLink) m.reply('Hapus!!')
+  if (chat.antiLink && isGroupLink) m.reply('_*Jika bukan link group ini, mohon segera dihapus!!*_')
 
   return true
 }
