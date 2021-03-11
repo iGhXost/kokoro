@@ -79,7 +79,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┏━━━━「 ${conn.user.name} 」
 ┣ ❖ Hai %name!
 ┃
-┣ ❖ Username @${who.replace(/@.+/, '')}
+┣ ❖ Username @$user.split`@`[0]
 ┣ ❖ *%exp XP*
 ┣ ❖ Tersisa *%limit Limit*
 ┃
