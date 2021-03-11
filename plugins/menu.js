@@ -79,7 +79,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┏━━━━「 ${conn.user.name} 」
 ┣ ❖ Hai %name!
 ┃
-┣ ❖ Username @${user.split`@`[0]}
+┣ ❖ Username @${username`@`[0]}
 ┣ ❖ *%exp XP*
 ┣ ❖ Tersisa *%limit Limit*
 ┃
