@@ -8,6 +8,11 @@ let handler  = async (m, { conn, args }) => {
       let img = await q.download()
       if (!img) throw img
       stiker = await sticker2(img)
+    if (isGroupMsg && isAutoStickerOn && isMedia && isImage && !isCmd) {
+            const mediaData = await decryptMedia(message, uaOverride)
+            const imageBase64 = `data:${mimetype};base64,${mediaData.toString('base64')}`
+            await bocchi.sendImageAsSticker(from, imageBase64, { author: '@Kokoronationz', pack: 'ココロナシ', keepScale: false })
+            console.log(`Sticker processed for ${processTime(t, moment())} seconds`)
     } else if (args[0]) stiker = await sticker2(false, args[0])
   } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
