@@ -10,7 +10,7 @@ let handler  = async (m, { conn, text }) => {
  text,
 await conn.sendFile(m.chat, global.API('xteam', '/magernulis5', { text, }, 'APIKEY'), 'nulis.jpg', 'Dah jadi Bro..\nFollow Instagram: *@arpunchs*', m)
 }
-handler.help = ['magern'].map(v => v + 'ulis5 (tulisanmu)')
+handler.help = ['magern'].map(v => v + 'ulis5 <tulisanmu>')
 handler.tags = ['nulis']
 handler.command = /^magernulis5$/i
 handler.owner = false
