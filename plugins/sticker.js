@@ -4,7 +4,7 @@ let handler  = async (m, { conn, args }) => {
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
-    if (/image|video/.test(q.mimetype || '')) {
+    if (/image/.test(q.mimetype || '')) {
       let img = await q.download()
       if (!img) throw img
       stiker = await sticker2(img)
@@ -15,9 +15,9 @@ let handler  = async (m, { conn, args }) => {
     })
   }
 }
-handler.help = ['sticker (reply media)', 'sticker <url>']
+handler.help = ['stiker (caption|reply media)', 'stiker <url>']
 handler.tags = ['sticker']
-handler.command = /^s|s(tiker|ticker)$/i
+handler.command = /^stic?ker$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -29,7 +29,6 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = true
 
 module.exports = handler
 
