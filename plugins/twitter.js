@@ -9,6 +9,8 @@ handler.help = [].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.register = true
 
+handler.limit = true
+
 handler.command = /^$/i
 
 module.exports = handler
