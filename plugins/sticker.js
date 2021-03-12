@@ -12,11 +12,6 @@ let handler  = async (m, { conn, args }) => {
   } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m
-    if (isGroupMsg && isAutoStickerOn && isMedia && isImage && !isCmd) {
-            const mediaData = await decryptMedia(message, uaOverride)
-            const imageBase64 = `data:${mimetype};base64,${mediaData.toString('base64')}`
-            await bocchi.sendImageAsSticker(from, imageBase64, { author: '@Kokoronationz', pack: 'ココロナシ', keepScale: false })
-            console.log(`Sticker processed for ${processTime(t, moment())} seconds`)
     })
   }
 }
