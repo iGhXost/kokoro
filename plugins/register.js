@@ -21,7 +21,7 @@ Daftar berhasil!
 ┣ ❖ SN: ${sn}
 ┗━━━━━━━
 
- _Simpan Serial Number anda_
+ _Simpan Serial Number anda!_
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>|<umur>')
