@@ -4,7 +4,7 @@ let handler  = async (m, { conn, args }) => {
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
-    if (/image/.test(q.mimetype || '')) {
+    if (/image|video/.test(q.mimetype || '')) {
       let img = await q.download()
       if (!img) throw img
       stiker = await sticker2(img)
