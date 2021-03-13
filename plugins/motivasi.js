@@ -29,7 +29,7 @@ global.motivasi = [
 "Kunci sukses adalah memusatkan pikiran sadar kita pada hal-hal yang kita inginkan, bukan hal-hal yang kita takuti.",
 "Jangan takut gagal. Ketakutan berada di tempat yang sama tahun depan seperti Anda saat ini.",
 "Jika kita terus melakukan apa yang kita lakukan, kita akan terus mendapatkan apa yang kita dapatkan.",
-"Jika Anda tidak dapat mengatasi stres, Anda tidak akan mengelola kesuksesan."
+"Jika Anda tidak dapat mengatasi stres, Anda tidak akan mengelola kesuksesan.",
 "Bersikap keras kepala tentang tujuan Anda dan fleksibel tentang metode Anda.",
 "Kerja keras mengalahkan bakat ketika bakat tidak bekerja keras.",
 "Ingatlah bahwa pelajaran terbesar dalam hidup biasanya dipelajari dari saat-saat terburuk dan dari kesalahan terburuk.",
