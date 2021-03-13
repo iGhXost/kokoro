@@ -1,11 +1,8 @@
-let util = require('util')
-let path = require('path')
-let { spawn } = require('child_process')
-
 let handler  = async (m, { conn, args }) => {
-  let inputPath ='src/kuriyama.png'
+  let foto ='src/kuriyama.png'
   
-    conn.sendFile(m.chat, inputPath, 'kuriyama.png', '404 not found', m)
+  let mentionedJid = [who]
+    conn.sendFile(m.chat, foto, 'kuriyama.png', '404 not found', m)
   })
 }
 handler.help = ['foto']
