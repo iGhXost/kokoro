@@ -3,7 +3,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 let handler  = async (m, { conn, args }) => {
-  let inputPath ='src/kertas/kuriyama.png'
+  let inputPath ='src/kuriyama.png'
   .on('error', e => conn.reply(m.chat, util.format(e), m))
   .on('exit', () => {
     conn.sendFile(m.chat, inputPath, 'kuriyama.png', '404 not found', m)
