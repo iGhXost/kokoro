@@ -128,7 +128,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
     conn.fakeReply(m.chat, text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
-    conn.sendFile(m.chat, pp, 'kuriyama.png', str, m, false, { contextInfo: { mentionedJid }})
+    let mentionedJid = [who]
+    conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
