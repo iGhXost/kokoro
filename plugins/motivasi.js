@@ -74,4 +74,5 @@ global.motivasi = [
 "Optimistis adalah salah satu kualitas yang lebih terkait dengan kesuksesan dan kebahagiaan daripada yang lain.",
 "Penghargaan paling tinggi bagi seorang pekerja keras bukanlah apa yang dia peroleh dari pekerjaan itu, tapi seberapa berkembang ia dengan kerja kerasnya itu.",
 "Cara terbaik untuk memulai adalah dengan berhenti berbicara dan mulai melakukan.",
-"Kegagalan tidak akan pernah menyusul jika tekad untuk sukses cukup kuat.",
+"Kegagalan tidak akan pernah menyusul jika tekad untuk sukses cukup kuat."
+]
