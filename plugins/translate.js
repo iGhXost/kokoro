@@ -1,4 +1,4 @@
-const translate = require('translate-google-api')
+const translate = require('google-translate-api')
 
 // made with love, by Ariffb
 // wa.me/6283128734012
