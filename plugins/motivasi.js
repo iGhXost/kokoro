@@ -60,7 +60,6 @@ global.motivasi = [
 "Penetapan tujuan adalah rahasia masa depan yang menarik.",
 "Saat kita berusaha untuk menjadi lebih baik dari kita, segala sesuatu di sekitar kita juga menjadi lebih baik.",
 "Pertumbuhan dimulai ketika kita mulai menerima kelemahan kita sendiri.",
-"Jatuh cinta pada dirimu adalah rahasia pertama menuju kebahagiaan.",
 "Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
 "Kemauan adalah kunci sukses. Orang-orang sukses, berusaha keras apa pun yang mereka rasakan dengan menerapkan keinginan mereka untuk mengatasi sikap apatis, keraguan atau ketakutan.",
 "Janganlah pernah menyerah ketika Anda masih mampu berusaha lagi. Tidak ada kata berakhir sampai Anda berhenti mencoba.",
