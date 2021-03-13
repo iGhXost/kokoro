@@ -42,6 +42,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^3.0.0",
     "google-it": "^1.6.2",
+    "google-tranlate-api": "^1.0.4",
     "jsdom": "^16.4.0",
     "node-fetch": "^2.6.1",
     "node-gtts": "^2.0.2",
