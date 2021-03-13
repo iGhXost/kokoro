@@ -24,7 +24,7 @@ function pickRandom(list) {
 
 global.motivasi = [
 "Jangan bicara, bertindak saja. Jangan katakan, tunjukkan saja. Jangan janji, buktikan saja.",
-"Jangan pernah berhenti melakukan yang terbaik hanya karena seseorang tidak memberi Anda penghargaan."
+"Jangan pernah berhenti melakukan yang terbaik hanya karena seseorang tidak memberi Anda penghargaan.",
 "Bekerja saat mereka tidur. Belajar saat mereka berpesta. Hemat sementara mereka menghabiskan. Hiduplah seperti mimpi mereka.",
 "Kunci sukses adalah memusatkan pikiran sadar kita pada hal-hal yang kita inginkan, bukan hal-hal yang kita takuti.",
 "Jangan takut gagal. Ketakutan berada di tempat yang sama tahun depan seperti Anda saat ini.",
