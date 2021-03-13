@@ -95,16 +95,16 @@ let handler = async (m, { conn, text, args, usedPrefix }) => {
     console.log(e)
   }
 }
-handler.help = ['stickergif (caption|reply media)', 'sgif (caption|reply media)']
+handler.help = ['stickergif (reply media) _maintenance_', 'sgif (reply media) _maintenance_']
 handler.tags = ['sticker']
-handler.command = /^(s(tic?ker)?(gif)?)$/i
+handler.command = /^(s(gif|tickergif)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.register = true
 
 handler.fail = null
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
