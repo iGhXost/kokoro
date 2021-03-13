@@ -3,7 +3,6 @@ let handler  = async (m, { conn, args }) => {
   
   let mentionedJid = [who]
     conn.sendFile(m.chat, foto, 'kuriyama.png', '404 not found', m)
-  })
 }
 handler.help = ['foto']
 handler.tags = ['foto']
