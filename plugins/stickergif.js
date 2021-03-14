@@ -100,6 +100,7 @@ handler.tags = ['sticker']
 handler.command = /^(s(tic?ker)?(gif)?)$/i
 handler.owner = false
 handler.mods = false
+handler.group = true
 handler.premium = false
 handler.register = true
 
