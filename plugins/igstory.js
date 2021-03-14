@@ -27,6 +27,7 @@ handler.help = ['igstory'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 
 handler.command = /^(igs(tory)?)$/i
+handler.group = true
 handler.premium = true
 handler.register = true
 
