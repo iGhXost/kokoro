@@ -16,7 +16,7 @@ handler.command = /^magernulis2$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true
-handler.group = true
+handler.group = false
 handler.private = false
 
 handler.admin = false
