@@ -89,7 +89,7 @@ let handler = async (m, { conn, text, args, usedPrefix }) => {
         // fs.unlinkSync() wah gatau gmn cara ngapusnya :/
       })
     } else {
-      m.reply(`Kirim gambar/video(< 11 detik)/gif dengan caption *${usedPrefix}s* atau reply media yang sudah dikirim`)
+      m.reply(`Kirim gambar/video(< 11 detik)/gif dengan caption *${usedPrefix}sgif* atau reply media yang sudah dikirim`)
     }
   } catch (e) {
     console.log(e)
