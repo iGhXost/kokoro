@@ -6,7 +6,7 @@ http://wa.me/6283128734012
 let handler = async (m, { conn, args, usedPrefix }) => {
     if (args[0] === 'open') {
         conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, false)
-        conn.fakeStatus(m.chat, `*Grup berhasil dibuka!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
+        conn.fakeReply(m.chat, `*Grup berhasil dibuka!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
     } else if (args[0] === 'close') {
         conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, true)
         conn.fakeReply(m.chat, `*Grup berhasil ditutup!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
