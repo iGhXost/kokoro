@@ -9,6 +9,7 @@ handler.help = ['brainly <soal>']
 handler.tags = ['internet']
 
 handler.command = /^brainly$/i
+handler.group = true
 handler.register = true
 
 module.exports = handler
