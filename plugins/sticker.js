@@ -21,7 +21,7 @@ handler.command = /^s|sti(ker|cker)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = true
+handler.group = false
 handler.private = false
 handler.register = true
 
