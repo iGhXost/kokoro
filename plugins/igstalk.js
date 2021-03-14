@@ -37,6 +37,7 @@ handler.help = ['igstalk'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 
 handler.command = /^(igstalk)$/i
+handler.premium = true
 handler.register = true
 
 handler.fail = null
