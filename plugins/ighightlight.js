@@ -18,6 +18,7 @@ handler.help = ['ighighlight'].map(v => v + ' <username>')
 handler.tags = ['downloader']
 
 handler.command = /^(ighighlight?)$/i
+handler.group = true
 handler.premium = true
 handler.register = true
 
