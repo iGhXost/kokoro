@@ -95,9 +95,9 @@ let handler = async (m, { conn, text, args, usedPrefix }) => {
     console.log(e)
   }
 }
-handler.help = ['stickergif (reply media)', 'sgif (reply media)']
+handler.help = ['stickergif (caption|reply media)', 'sgif (caption|eplyy media)']
 handler.tags = ['sticker']
-handler.command = /^(s(tic?ker)?(gif)?)$/i
+handler.command = /^s?(gif)|(tic?ker)$/i
 handler.owner = false
 handler.mods = false
 handler.group = true
