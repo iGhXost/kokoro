@@ -28,6 +28,7 @@ let handler = async m => m.reply(`
 handler.help = ['manga','manhwa']
 handler.tags = ['weebs']
 handler.command = /^ma(nga|nhwa)$/i
+handler.group = true
 handler.register = true
 
 module.exports = handler
