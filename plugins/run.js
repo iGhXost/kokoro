@@ -2,11 +2,11 @@ let handler = async (m, { conn, text }) => {
   let q
   try { q = m.quoted.download() }
   catch (e) { q = m.download() }
-  m.reply('_Sedang membuat..._\n*Mohon tunggu sekitar 1 menit*')
-  running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', '*© Nurutomo*\nMade with FFmpeg', m))
+  m.reply('Sedang membuat...\nMohon tunggu sekitar 1 menit')
+  running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', 'Nih Video Bergeraknya,,\n\nSemoga suka yaa', m))
 }
-handler.help = ['run']
-handler.tags = ['tools']
+handler.help = ['run (reply media)']
+handler.tags = ['sticker']
 handler.command = /^run$/i
 handler.group = true
 handler.register = true
