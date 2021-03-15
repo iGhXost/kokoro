@@ -100,7 +100,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣ ❖ Arya274
 ┣ ❖ Gimenz.id
 ┣ ❖ MFarelS
-┣ ❖ Nezuko
+┣ ❖ Dan Kawan-kawan
 ┗━━━━━━━
 `
     let header = conn.menu.header || '┏━━━━「 %category 」'
