@@ -34,7 +34,7 @@ ${biography}${external_url ? '\n*External URL:* ' + external_url : ''}
   else m.reply(caption)
 }
 handler.help = ['igstalk'].map(v => v + ' <username>')
-handler.tags = ['downloader']
+handler.tags = ['internet']
 
 handler.command = /^(igstalk)$/i
 handler.group = true
