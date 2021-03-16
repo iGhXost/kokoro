@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
     m.reply(`(${-poin} Limit) + (${-pjk} Limit (Pajak 2%)) = ( ${-limit} Limit)`)
     conn.fakeReply(m.chat, `+${poin} Limit`, who, m.text)
 }
-handler.help = ['paylimit','limit'].map(v => v + ' <amount>')
+handler.help = ['paylimit','limit'].map(v => v + ' <@user mountt>')
 handler.tags = ['xp']
 handler.command = /^(pay)?limit$/
 handler.rowner = true
