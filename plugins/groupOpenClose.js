@@ -17,7 +17,8 @@ let handler = async (m, { conn, args, usedPrefix }) => {
         conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, true)
         conn.fakeReply(m.chat, `*Grup berhasil ditutup!*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
     } else {
-        conn.fakeReply(m.chat, `*Contoh : ${usedPrefix}grup tutup*`, '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m)
+        await conn.updatePresence(m.chat, Presence.composing) 
+		conn.reply(m.chat, `*Format salah! Contoh :*\n\n	*○ ${usedPrefix + command} close*\n	*○ ${usedPrefix + command} open*`, m)
     }
 }
 
