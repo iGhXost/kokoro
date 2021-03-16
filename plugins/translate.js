@@ -1,4 +1,4 @@
-const translate = require('google-translate-open-api')
+const translate = require('translate-google-api')
 
 // made with love, by Ariffb
 // wa.me/6283128734012
@@ -27,7 +27,7 @@ handler.command = /^(tr(anslate)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = false
+handler.group = true
 handler.private = false
 handler.register = true
 
@@ -38,3 +38,4 @@ handler.fail = null
 handler.exp = 0
 
 module.exports = handler
+
