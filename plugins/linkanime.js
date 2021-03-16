@@ -43,9 +43,9 @@ let handler = async m => m.reply(`
 ┣ ❖ https://myanimelist.net
 ┗━━━━━━━
 `.trim()) // Tambah sendiri kalo mau
-handler.help = ['linkanime']
+handler.help = ['animelink']
 handler.tags = ['weebs']
-handler.command = /^linkanime$/i
+handler.command = /^animelink$/i
 handler.group = true
 handler.register = true
 
