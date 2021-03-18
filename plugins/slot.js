@@ -13,7 +13,7 @@ ${pickRandom(['🍇','🍉','🍎','🪙','🍌','🍋','🍊','🍓','🍒','�
 }
 handler.help = ['slot']
 handler.tags = ['game']
-handler.command = /^slot/i
+handler.command = /^(slot)/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
