@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
     let xp = `${text}`
     let jackpot = Math.ceil(xp * pajak)
     let win = Math.ceil(xp / 2)
-    if (xp < 5) throw 'Minimal 5'
+    if (xp < 100) throw 'Minimal 100'
     let users = global.DATABASE._data.users
     if (xp > users[m.sender].exp) throw 'XP Anda Tidak Cukup'
     let emojis = ["🍏","🍎","🍐","🍊","🍋","🍓","🍇","🍑","🥭","🍒","🍍","🪙"];
