@@ -10,7 +10,7 @@ let handler = async (m, { conn, text }) => {
     if (xp < 100) throw 'Minimal 100'
     let users = global.DATABASE._data.users
     if (xp > users[m.sender].exp) throw 'XP Anda Tidak Cukup'
-    let emojis = ["🍏","🍎","🍊","🍋","🍑","🪙"];
+    let emojis = ["🍏","🍑","🪙"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
     let c = Math.floor(Math.random() * emojis.length);
