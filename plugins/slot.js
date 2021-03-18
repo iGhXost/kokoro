@@ -35,20 +35,20 @@ let handler = async (m, { conn, text }) => {
     let end;
     if (a == b && b == c) {
         end = "_*YOU WIN*_";
-        hasil = `Win With 3 Thing Common +Rp.${jackpot}`;
+        hasil = `Win With 3 Thing Common +${jackpot}XP`;
         gcha = `${x[0]} | ${y[0]} | ${z[0]}\n${x[1]} | ${y[1]} | ${z[1]} <=== ${end}\n${x[2]} | ${y[2]} | ${z[2]}`;
         global.DATABASE._data.users[m.sender].exp += jackpot
         await conn.fakeReply(m.chat, `*[🎰 VIRTUAL SLOT 🎰]*\n\n${gcha}\n\n*[🎰 VIRTUAL SLOT 🎰]*`, '0@s.whatsapp.net', `${hasil}`, m)
 
     } else if (a == b || a == c || b == c) {
         end = "_*YOU WIN*_";
-        hasil = `Win With 2 Things Common +Rp.${win}`;
+        hasil = `Win With 2 Things Common +${win}XP`;
         gcha = `${x[0]} | ${y[0]} | ${z[0]}\n${x[1]} | ${y[1]} | ${z[1]} <=== ${end}\n${x[2]} | ${y[2]} | ${z[2]}`;
         global.DATABASE._data.users[m.sender].exp += win
         await conn.fakeReply(m.chat, `*[🎰 VIRTUAL SLOT 🎰]*\n\n${gcha}\n\n*[🎰 VIRTUAL SLOT 🎰]*`, '0@s.whatsapp.net', `${hasil}`, m.chat)
     } else {
         end = "_*YOU LOSE*_";
-        hasil = `Hopefully You Are lucky Next -Rp.${xp}`;
+        hasil = `Hopefully You Are lucky Next -${xp}XP`;
         gcha = `${x[0]} | ${y[0]} | ${z[0]}\n${x[1]} | ${y[1]} | ${z[1]} <=== ${end}\n${x[2]} | ${y[2]} | ${z[2]}`;
         global.DATABASE._data.users[m.sender].exp -= xp
         await conn.fakeReply(m.chat, `*[🎰 VIRTUAL SLOT 🎰]*\n\n${gcha}\n\n*[🎰 VIRTUAL SLOT 🎰]*`, '0@s.whatsapp.net', `${hasil}`, m.chat)
