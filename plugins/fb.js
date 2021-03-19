@@ -1,44 +1,53 @@
-let handler = async(m, { conn, text }) => {
-    let [link, resolusi] = text.split `|`
-    if (!link) return conn.reply(m.chat, 'Uhm... urlnya mana?', m)
+let handler = async (m, { conn, args }) => {
+  if (!args[0]) throw 'Uhm...url nya mana?'
+  let res = await fetch(global.API('xteam', '/dl/fb', {
+    url: args[0]
+  }, 'APIKEY')
+  if (res.status !== 200) {
+    res.text()
+    throw res.status
+  }
+  let json = await res.json()
+  if (!json.result) throw json
+  let { name, author, description, uploadDate, duration, url, isFamilyFriendly, genre, keywords, contentSize, videoQuality, commentCount } = json.result
+  let { name: authorname, url: authorlink } = author
+  let dateConfig = {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  }
+  let unknown = '_Unknown_'
+  let none = '_None_'
+  let caption = `
+Konten${isFamilyFriendly ? ' ' : ' *Tidak* '}Family Friendly
+Post oleh ${name} (${authorname || ''}) (${authorlink || ''})
+Diposting pada ${new Date(uploadDate).toLocaleDateString('id', dateConfig)}
+Size: ${contentSize || unknown}
+Durasi: ${clockString(+ new Date(duration))}
+Genre: ${genre || none}
+Kualitas: ${quality ? quality : unknown}
 
-    if (!resolusi) return conn.reply(m.chat, 'Harap memasukkan resolusi hd/sd !', m)
+${description}
 
-    conn.reply(m.chat, 'Tunggu bentar ya :), tergantung durasinya om :)', m)
-    new Promise((resolve, reject) => {
-        axios.get(`https://mnazria.herokuapp.com/api/fbdownloadervideo?url=` + encodeURIComponent(link))
-            .then((res) => {
-                if (resolusi == 'hd') {
-                    dl_link = res.data.resultHD
-                } else {
-                    dl_link = res.data.resultSD
-                }
-                conn.reply(m.chat, `*Link:* ${dl_link} \n\nfile akan segera dikirim !`, m)
-                conn.sendFile(m.chat, dl_link, 'video.mp4', `Nih om :3\n\n\n*Link:* ${dl_link}`, m)
-
-            })
-            .catch(reject => {
-                conn.reply(m.chat, 'NoneType object has no attribute group', m)
-            })
-    })
-
+Keyword: ${keywords || none}
+`.trim()
+  conn.sendFile(m.chat, url, 'media-fb', caption, m)
 }
-
-handler.help = ['fb <hd/sd>|<url>']
+handler.help = ['fb'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^fb$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = true
-handler.private = false
+
+handler.command = /^f((b|acebook)(dl|download)?(er)?)$/i
+handler.premium = true
 handler.register = true
 
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
-handler.limit = true
-
 module.exports = handler
+
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
+}
