@@ -15,7 +15,7 @@ let rl = Readline.createInterface(process.stdin, process.stdout)
 let WAConnection = simple.WAConnection(_WAConnection)
 
 
-global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '')
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 global.timestamp = {
   start: new Date
 }
@@ -118,7 +118,7 @@ global.reloadHandler = function () {
   conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject'
   conn.bye = 'Selamat tinggal @user!'
   conn.handler = handler.handler
-  conn.onAdd = handler.welcome 
+  conn.onAdd = handler.welcome
   conn.onLeave = handler.leave
   conn.onDelete = handler.delete
   conn.on('message-new', conn.handler)
@@ -197,6 +197,6 @@ global.support = {
 Object.freeze(global.support)
 
 if (!global.support.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
-if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-libwebp while compiling ffmpeg)')
+if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
 if (!global.support.convert) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt installed (pkg install imagemagick)')
 
