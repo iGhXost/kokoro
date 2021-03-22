@@ -10,7 +10,8 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': '0148bbad1a10b740'
 }
-
+global.packname = 'kokoro-bot'
+global.author = '@Kokoronationz'
 
 
 
