@@ -1,5 +1,6 @@
 let fs = require ('fs')
 let path = require('path')
+let levelling = require('../lib/levelling')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
