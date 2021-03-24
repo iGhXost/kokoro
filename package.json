@@ -24,7 +24,8 @@
     "name": "Kokoronationz"
   },
   "repository": {
-    "url": "https://github.com/Kokoronationz/kokoro.git"
+    "type": "git",
+    "url": "git+https://github.com/Kokoronationz/kokoro.git"
   },
   "bugs": {
     "url": "https://github.com/Kokoronationz/kokoro/issues"
