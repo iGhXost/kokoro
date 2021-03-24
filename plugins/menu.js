@@ -1,7 +1,6 @@
 let fs = require ('fs')
 let path = require('path')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-let pp = './src/kuriyama.png'
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let exp = global.DATABASE.data.users[m.sender].exp
@@ -130,7 +129,7 @@ let pp = './src/kuriyama.png'
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
-    conn.fakeReply(m.chat, pp, 'profile.jpg', text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
+    conn.fakeReply(m.chat, text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
