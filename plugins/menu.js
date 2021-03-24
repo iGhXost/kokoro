@@ -3,8 +3,8 @@ let path = require('path')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
-    let exp = global.DATABASE.data.users[m.sender].exp
-    let limit = global.DATABASE.data.users[m.sender].limit
+    let { exp, limit, level } = global.DATABASE.data.users[m.sender]
+    let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date
     let locale = 'id'
@@ -82,7 +82,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┏━━━━「 ${conn.user.name} 」
 ┣ ❖ Hai %name!
 ┃
-┣ ❖ *%exp XP*
+┣ ❖ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
+┣ ❖ %totalexp XP in Total
 ┣ ❖ Tersisa *%limit Limit*
 ┃
 ┣ ❖ Tanggal: *%week %weton, %date*
@@ -124,11 +125,15 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       npmname: package.name,
       npmdesc: package.description,
       version: package.version,
+      exp: exp - min,
+      maxexp: xp,
+      totalexp: exp,
+      xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      exp, limit, name, weton, week, date, time, totalreg, rtotalreg,
+      level, limit, name, weton, week, date, time, totalreg, rtotalreg,
       readmore: readMore
     }
-    text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
+    text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => ''+replace[name])
     conn.fakeReply(m.chat, text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
