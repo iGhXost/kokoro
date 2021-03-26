@@ -2,23 +2,18 @@ let imageToBase64 = require('image-to-base64');
 let axios = require("axios");
 let handler = async (m, { conn }) => {
 
-if (quotedMessage) {
-				message.message = quotedMessage;
-			}
-
-			if (!message.message.imageMessage || message.message.imageMessage.mimetype != "image/jpeg") {
-				conn.sendMessage(senderNumber, "Tidak ada gambar :)", MessageType.text, { quoted: message, detectLinks: false });
-			}
-
-			const image = await conn.downloadMediaMessage(message);
-			const imageBase64 = image.toString("base64");
-
-			const response = await axios.post("https://trace.moe/api/search", { "image":imageBase64 });
-			const result = response.data.docs[0];
-
-			const text = `Nama Anime : _${result.title_romaji}_\nSeason : _${result.season}_\nEpisode : _${result.episode}_\nAkurasi : _${result.similarity}_`
-			conn.sendMessage(senderNumber, text, MessageType.text, { quoted: message });
-			
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+						reply(mess.wait)
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						media = await client.downloadMediaMessage(encmedia)
+						await wait(media).then(res => {
+							client.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
+						}).catch(err => {
+							reply(err)
+						})
+					} else {
+						reply('Foto aja mas')
+					}
 }
 handler.help = ['wait']
 handler.tags = ['weebs']
