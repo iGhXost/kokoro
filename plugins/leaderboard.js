@@ -20,7 +20,7 @@ ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`
 • *Level Leaderboard Top ${len}* •
 Kamu: *${usersLevel.indexOf(m.sender) + 1}* dari *${usersLevel.length}*
 
-${sortedLevel.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *Level ' + data.level + ' *').join`\n`}
+${sortedLevel.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *Level ' + data.level + '*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
