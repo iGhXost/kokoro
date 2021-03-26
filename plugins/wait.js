@@ -8,7 +8,6 @@ if (quotedMessage) {
 
 			if (!message.message.imageMessage || message.message.imageMessage.mimetype != "image/jpeg") {
 				conn.sendMessage(senderNumber, "Tidak ada gambar :)", MessageType.text, { quoted: message, detectLinks: false });
-				break;
 			}
 
 			const image = await conn.downloadMediaMessage(message);
@@ -19,7 +18,6 @@ if (quotedMessage) {
 
 			const text = `Nama Anime : _${result.title_romaji}_\nSeason : _${result.season}_\nEpisode : _${result.episode}_\nAkurasi : _${result.similarity}_`
 			conn.sendMessage(senderNumber, text, MessageType.text, { quoted: message });
-			break;
 			
 }
 handler.help = ['wait']
