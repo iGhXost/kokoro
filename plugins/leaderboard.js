@@ -1,8 +1,10 @@
 let handler = async (m, { conn, args }) => {
   let sortedExp = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].exp - a[1].exp)
   let sortedLim = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].limit - a[1].limit)
+  let sortedLevel = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].level - a[1].level)
   let usersExp = sortedExp.map(v => v[0])
   let usersLim = sortedLim.map(v => v[0])
+  let usersLevel = sortedLevel.map(v => v[0])
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 3)) : Math.min(10, sortedExp.length)
   let text = `
 • *XP Leaderboard Top ${len}* •
@@ -14,6 +16,10 @@ ${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`
 Kamu: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
 
 ${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.limit + ' Limit*').join`\n`}
+
+• *Level Leaderboard Top ${len}* •
+Kamu: *${usersLevel.indexOf(m.sender) + 1}* dari *${usersLevel.length}*
+${sortedLevel.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *Level ' + data.level + '*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
