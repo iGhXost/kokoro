@@ -1,11 +1,10 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let num = /([0-9])$/i
-let pajak = 4
 let handler = async (m, { conn, text }) => {
     if (!text) throw 'Masukkan jumlah XP Yang Akan Anda Slot'
     if (!num.test(text)) throw 'Hanya Angka'
     let xp = `${text}`
-    let jackpot = Math.ceil(xp * pajak)
+    let jackpot = Math.ceil(xp * 10)
     let win = Math.ceil(xp / 2)
     if (xp < 100) throw 'Minimal 100'
     let users = global.DATABASE._data.users
