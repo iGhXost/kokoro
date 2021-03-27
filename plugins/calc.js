@@ -1,9 +1,8 @@
-global.math = global.math ? global.math : {}
 let handler = async (m, { conn, text }) => {
   let id = m.chat
-  if (id in global.math) {
-    clearTimeout(global.math[id][3])
-    delete global.math[id]
+  if (id in conn.math) {
+    clearTimeout(conn.math[id][3])
+    delete conn.math[id]
     m.reply('Hmmm...ngecheat?')
   }
   let val = text
@@ -33,7 +32,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['calc <expression>']
 handler.tags = ['tools']
 handler.command = /^(calc(ulat(e|or))?|kalk(ulator)?)$/i
-handler.group = true
 handler.register = true
 handler.exp = 5
 
