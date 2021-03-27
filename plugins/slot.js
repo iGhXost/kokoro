@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
     if (!num.test(text)) throw 'Hanya Angka'
     let xp = `${text}`
     let jackpot = Math.ceil(xp * 10)
-    let win = Math.ceil(xp / 2)
+    let win = Math.ceil(xp * 2)
     if (xp < 100) throw 'Minimal 100'
     let users = global.DATABASE._data.users
     if (xp > users[m.sender].exp) throw 'XP Anda Tidak Cukup'
