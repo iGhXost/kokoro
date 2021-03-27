@@ -17,8 +17,8 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       break
     case 'public':
       isAll = true
-      if (!isOwner) {
-        global.dfail('owner', m, conn)
+      if (!isROwner) {
+        global.dfail('rowner', m, conn)
         throw false
       }
       global.opts['self'] = !isEnable
