@@ -50,9 +50,9 @@ handler.exp = 0
 
 module.exports = handler
 
-function sort(property, ascending = false) {
-  if (property) return (...args) => args[!ascending & 1][property] - args[ascending & 1][property]
-  else return (...args) => args[!ascending & 1] - args[ascending & 1]
+function sort(property, descending = false) {
+  if (property) return (...args) => args[!descending & 1][property] - args[descending & 1][property]
+  else return (...args) => args[!descending & 1] - args[descending & 1]
 }
 
 function toNumber(property, _default = 0) {
