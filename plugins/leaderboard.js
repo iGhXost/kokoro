@@ -50,7 +50,7 @@ handler.exp = 0
 
 module.exports = handler
 
-function sort(property, descending = false) {
+function sort(property, descending = true) {
   if (property) return (...args) => args[!descending & 1][property] - args[descending & 1][property]
   else return (...args) => args[!descending & 1] - args[descending & 1]
 }
