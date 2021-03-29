@@ -1,18 +1,18 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan nama yang akan diartikan', m)
+    if (!text) return conn.reply(m.chat, 'Masukan Teksnya', m)
 
   await m.reply('Searching...')
-	axios.get(`https://mnazria.herokuapp.com/api/arti?nama=${text}`).then ((res) => {
-	 	let hasil = `Arti Namamu Adalah\n\n${res.data.result}`
+	axios.get(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${text}`).then ((res) => {
+	 	let hasil = `Nih Link Pastebinmu Dh Jadi\n${res.data.result}`
 
     conn.reply(m.chat, hasil, m)
 	})
 }
-handler.help = ['artinama'].map(v => v + ' <nama>')
-handler.tags = ['primbon']
-handler.command = /^(artinama)$/i
+handler.help = ['pastebin'].map(v => v + ' <opsional>')
+handler.tags = ['tools']
+handler.command = /^(pastebin)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
