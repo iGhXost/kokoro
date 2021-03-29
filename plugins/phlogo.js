@@ -23,7 +23,7 @@ Buat Beli Apikey : 10K
      conn.sendFile(m.chat, buff, 'foto.jpg', str, m)
 }
 handler.help = ['phlogo <teks|teks>']
-handler.tags = ['sticker']
+handler.tags = ['nulis']
 handler.command = /^(phlogo)$/i
 handler.owner = false
 handler.mods = false
