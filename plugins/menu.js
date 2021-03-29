@@ -81,7 +81,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
-┇     「 ${conn.user.name} 」
+┇     *「 ${conn.user.name} 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃
 ┣ ❖ Hai %name!
@@ -110,7 +110,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣ ❖ Dan Kawan-kawan
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `
-    let header = conn.menu.header || '┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n┇     「 %category 」\n┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━'
+    let header = conn.menu.header || '┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n┇     *「 %category 」*\n┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━'
     let body   = conn.menu.body   || '┣ ❖  %cmd%islimit'
     let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
