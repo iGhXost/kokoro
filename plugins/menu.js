@@ -41,16 +41,16 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'sticker': 'Sticker',
       'weebs': 'Weebs',
       'game': 'Game',
+      'fun': 'Fun',
       'kerang': 'Kerang Ajaib',
       'quotes': 'Quotes',
       'primbon': 'Primbon Menu',
-      'admin': 'Admin',
-      'group': 'Group',
       'nulis': 'MagerNulis & Logo',
       'internet': 'Internet',
       'downloader': 'Downloader',
+      'admin': 'Admin',
+      'group': 'Group',
       'tools': 'Tools',
-      'fun': 'Fun',
       'jadibot': 'Jadi Bot',
       'premium': 'Premium Menu',
       'owner': 'Owner',
@@ -80,7 +80,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-┏━━━━「 ${conn.user.name} 」
+┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
+┇     「 ${conn.user.name} 」
+┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
+┃
 ┣ ❖ Hai %name!
 ┃
 ┣ ❖ Level *%level (%exp / %maxexp)* 
@@ -95,20 +98,21 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┣ ❖ Database: %rtotalreg of %totalreg
 ┣ ❖ Github:
 ┃ %github
-┗━━━━━━━
+┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 %readmore
-┏━━━━「 Thanks to」
+┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
+┇     「 Thanks to 」
+┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┣ ❖ Nurutomo
 ┣ ❖ St4rz
 ┣ ❖ Arya274
-┣ ❖ Gimenz.id
 ┣ ❖ MFarelS
 ┣ ❖ Dan Kawan-kawan
-┗━━━━━━━
+┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `
-    let header = conn.menu.header || '┏━━━━「 %category 」'
+    let header = conn.menu.header || '┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n┇     「 %category 」\n┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━'
     let body   = conn.menu.body   || '┣ ❖  %cmd%islimit'
-    let footer = conn.menu.footer || '┗━━━━━━━\n'
+    let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
