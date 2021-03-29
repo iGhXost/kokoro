@@ -32,7 +32,7 @@ Jangan Lupa Nikahin!
     });
     }
 handler.help = ['cowok']
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = /^(cowok)$/i
 handler.owner = false
 handler.mods = false
