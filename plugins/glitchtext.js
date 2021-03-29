@@ -18,7 +18,7 @@ Nih Ngab
      conn.sendFile(m.chat, buff, 'foto.jpg', str, m)
 }
 handler.help = ['glitchtext <teks|teks>']
-handler.tags = ['sticker']
+handler.tags = ['nulis']
 handler.command = /^(glitchtext)$/i
 handler.owner = false
 handler.mods = false
