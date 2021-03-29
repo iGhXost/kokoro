@@ -33,7 +33,7 @@ Jangan Lupa Nikahin!
     });
     }
 handler.help = ['cewek']
-handler.tags = ['fun']
+handler.tags = ['game']
 handler.command = /^(cewek)$/i
 handler.owner = false
 handler.mods = false
