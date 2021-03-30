@@ -9,6 +9,7 @@ let [tipe, emoji] = text.split `|`
  try {
   if (!tipe) throw 'Silahkan masukan tipe emoji\n\nMisal !semoji whatsapp'
   if (!emoji) throw 'Emoji?'
+  await m.reply('Sedang membuat...')
   let stiker = await sticker(null, global.API('xteam', '/sticker/emojitopng' + tipe, { emo: emoji }, 'APIKEY'), global.packname, global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
