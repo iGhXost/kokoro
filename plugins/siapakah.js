@@ -1,5 +1,5 @@
-let handler = async (m, { conn, text, participants }) => {
-  let member = participants.map(u => u.jid)
+let handler = async (m, { conn, text }) => {
+    let member = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
 let siapa = member[Math.floor(Math.random() * member.length)]
     let jawab = `
 *Pertanyaan :* ${m.text}
