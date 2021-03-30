@@ -84,34 +84,34 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 ┇     *「 ${conn.user.name} 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃
-┣ ❖ Hai %name!
+┃ ❖ Hai %name!
 ┃
-┣ ❖ Level *%level (%exp / %maxexp)* 
+┃ ❖ Level *%level (%exp / %maxexp)* 
 ┃      [%xp4levelup lagi untuk levelup]
-┣ ❖ %totalexp XP in Total
-┣ ❖ Tersisa *%limit Limit*
+┃ ❖ %totalexp XP in Total
+┃ ❖ Tersisa *%limit Limit*
 ┃
-┣ ❖ Tanggal: *%week %weton, %date*
-┣ ❖ Waktu: *%time*
+┃ ❖ Tanggal: *%week %weton, %date*
+┃ ❖ Waktu: *%time*
 ┃
-┣ ❖ Uptime: *_%uptime_ (%muptime)*
-┣ ❖ Database: %rtotalreg of %totalreg
-┣ ❖ Github:
+┃ ❖ Uptime: *_%uptime_ (%muptime)*
+┃ ❖ Database: %rtotalreg of %totalreg
+┃ ❖ Github:
 ┃ %github
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 %readmore
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇     *「 Thanks to 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
-┣ ❖ Nurutomo
-┣ ❖ St4rz
-┣ ❖ Arya274
-┣ ❖ MFarelS
-┣ ❖ Dan Kawan-kawan
+┃ ❖ Nurutomo
+┃ ❖ St4rz
+┃ ❖ Arya274
+┃ ❖ MFarelS
+┃ ❖ Dan Kawan-kawan
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `
     let header = conn.menu.header || '┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n┇     *「 %category 」*\n┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━'
-    let body   = conn.menu.body   || '┣ ❖  %cmd%islimit'
+    let body   = conn.menu.body   || '┃ ❖  %cmd%islimit'
     let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━\n'
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
