@@ -2,7 +2,7 @@ let handler = async (m, { conn, text, participants }) => {
   let member = participants.map(u => u.jid)
 let siapa = member[Math.floor(Math.random() * member.length)]
     let jawab = `
-*Pertanyaan :* ${m.text}
+*Pertanyaan :* ${text}
 *Jawaban* : @${siapa.replace(/@.+/, '')}
     `.trim()
     let mentionedJid = [siapa]
