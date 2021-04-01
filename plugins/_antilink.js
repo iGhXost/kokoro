@@ -9,7 +9,7 @@ handler.before = function (m, { user }) {
   if (chat.antiLink && isGroupLink) {
     m.reply('Hapus!!')
     if (global.opts['restrict']) {
-    if (!user.isAdmin) return true
+    if (!user.isAdmin) return false
       // this.groupRemove(m.chat, [m.sender])
     }
   }
