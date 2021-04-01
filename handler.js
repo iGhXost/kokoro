@@ -39,6 +39,7 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
+          prems: false,
           level: 0,
           autolevelup: false,
         }
