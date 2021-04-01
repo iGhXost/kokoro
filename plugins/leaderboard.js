@@ -1,34 +1,30 @@
-let handler = async (m, { conn, args, participants }) => {
-  let users = Object.entries(global.DATABASE.data.users).map(([key, value]) => {
-    return {...value, jid: key}
-  })
-  let sortedExp = users.map(toNumber('exp')).sort(sort('exp', true))
-  let sortedLim = users.map(toNumber('limit')).sort(sort('limit', true))
-  let sortedLevel = users.map(toNumber('level')).sort(sort('level', true))
-  let usersExp = sortedExp.map(enumGetKey)
-  let usersLim = sortedLim.map(enumGetKey)
-  let usersLevel = sortedLevel.map(enumGetKey)
-  console.log(participants)
-  let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 5)) : Math.min(5, sortedExp.length)
+let handler = async (m, { conn, args }) => {
+  let sortedExp = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].exp - a[1].exp)
+  let sortedLim = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].limit - a[1].limit)
+  let sortedLev = Object.entries(global.DATABASE.data.users).sort((a, b) => b[1].level - a[1].level)
+  let usersExp = sortedExp.map(v => v[0])
+  let usersLim = sortedLim.map(v => v[0])
+  let usersLev = sortedLev.map(v => v[0])
+  let len = args[0] && args[0].length > 0 ? Math.min(1000, Math.max(parseInt(args[0]), 5)) : Math.min(3, sortedExp.length)
   let text = `
 • *XP Leaderboard Top ${len}* •
 Kamu: *${usersExp.indexOf(m.sender) + 1}* dari *${usersExp.length}*
 
-${sortedExp.slice(0, len).map(({ jid, exp }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} Exp*`).join`\n`}
+${sortedExp.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *' + data.exp + ' Exp*').join`\n`}
 
 • *Limit Leaderboard Top ${len}* •
 Kamu: *${usersLim.indexOf(m.sender) + 1}* dari *${usersLim.length}*
 
-${sortedExp.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${limit} Limit*`).join`\n`}
+${sortedLim.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *' + data.limit + ' Limit*').join`\n`}
 
 • *Level Leaderboard Top ${len}* •
-Kamu: *${usersLevel.indexOf(m.sender) + 1}* dari *${usersLevel.length}*
+Kamu: *${usersLev.indexOf(m.sender) + 1}* dari *${usersLev.length}*
 
-${sortedExp.slice(0, len).map(({ jid, level }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *Level ${level}*`).join`\n`}
+${sortedLev.slice(0, len).map(([user, data], i) => (i + 1) + '. ' + conn.getName(user) + ': *' + data.level + ' Level*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
-      mentionedJid: [...usersExp.slice(0, len), ...usersLim.slice(0, len), ...usersLevel.slice(0, len)].filter(v => !participants.some(p => v === p.jid))
+      mentionedJid: [...usersExp.slice(0, len), ...usersLim.slice(0, len), ...usersLev.slice(0, len)]
     }
   })
 }
@@ -40,7 +36,6 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
