@@ -12,7 +12,7 @@ let who
     m.reply(`*「 ADD PREMIUM 」*\n\nNomor : wa.me/${who.split("@s.whatsapp.net")[0]}\n*Expired : Until the bot dies*\n\nTerimakasih telah beli Premium!`)
    } else m.reply('Ada nomor host disini..')
   }
-handler.help = ['addprem <@user>']
+handler.help = ['addprems <@user>']
 handler.tags = ['owner']
 handler.command = /^addprems$/i
 handler.rowner = true
