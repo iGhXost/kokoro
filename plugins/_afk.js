@@ -16,8 +16,11 @@ Anda berhenti AFK
     if (!afkTime || afkTime < 0) continue
     let reason = user.afkReason || 'AFK'
     m.reply(`
-Jangan tag dia, dia lagi ${reason}
-Selama ${clockString(new Date - afkTime)}
+*「 AFK 」*
+
+_Jangan tag dia!!_
+Alasan : ${reason}
+Selama : ${clockString(new Date - afkTime)}
 `.trim())
   }
   return true
