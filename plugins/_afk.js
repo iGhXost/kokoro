@@ -19,7 +19,7 @@ Anda berhenti AFK
 *「 AFK 」*
 
 _Jangan tag dia!!_
-Alasan : ${reason}
+Alasan  : ${reason}
 Selama : ${clockString(new Date - afkTime)}
 `.trim())
   }
