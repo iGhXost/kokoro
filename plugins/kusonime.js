@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
   if (!args[0]) throw 'Masukkan judul anime...'
-  let res = await fetch(global.API('xteam', '/anime/kusonime', {
+  let res = await fetch(global.API('xteam', '/anime/kusonime?q=', {
     anime: args[0]
   }, 'APIKEY'))
   let json = await res.json()
