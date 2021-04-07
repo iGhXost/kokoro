@@ -27,7 +27,7 @@ Link : ${link_dl}
   else m.reply(caption)
 }
 handler.help = ['kusonime'].map(v => v + ' <anime>')
-handler.tags = ['weebs']
+handler.tags = ['weeb']
 
 handler.command = /^(kusonime)$/i
 handler.group = true
