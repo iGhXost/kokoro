@@ -44,19 +44,3 @@ handler.fail = null
 handler.exp = 0
 
 module.exports = handler
-
-function sort(property, ascending = false) {
-  if (property) return (...args) => args[!ascending & 1][property] - args[ascending & 1][property]
-  else return (...args) => args[!ascending & 1] - args[ascending & 1]
-}
-
-function toNumber(property, _default = 0) {
-  if (property) return (a, i, b) => {
-    return {...b[i], [property]: a[property] === undefined ? _default : a[property]}
-  }
-  else return a => a === undefined ? _default : a
-}
-
-function enumGetKey(a) {
-  return a.jid
-}
