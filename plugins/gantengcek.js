@@ -15,7 +15,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
@@ -25,7 +25,7 @@ function pickRandom(list) {
 
 global.ganteng = [
 'Ganteng Level : 4%\n\nINI MUKA ATAU SAMPAH?!',
-'Ganteng Level : 7%\n\nSerius ya Bro,, Lu ampir mirip kayak Monyet!',
+'Ganteng Level : 7%\n\nSerius ya Bro, Lu ampir mirip kayak Monyet!',
 'Ganteng Level : 12%\n\nMakin lama liat muka lo gw bisa muntah!',
 'Ganteng Level : 22%\n\nMungkin karna lo sering liat berbuat maksiat😂',
 'Ganteng Level : 27%\n\nKeknya bakal susah dapet jodoh lu,, berdoa aja',
