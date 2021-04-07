@@ -25,7 +25,7 @@ function pickRandom(list) {
 
 global.cantik = [
 'Cantik Level : 4%\n\nINI MUKA ATAU SAMPAH?!',
-'Cantik Level : 7%\n\nSerius ya,, Lu ampir mirip kayak Monyet!',
+'Cantik Level : 7%\n\nSerius ya, Lu ampir mirip kayak Monyet!',
 'Cantik Level : 12%\n\nMakin lama liat muka lo gw bisa muntah!',
 'Cantik Level : 22%\n\nMungkin karna lo sering liat berbuat maksiat😂',
 'Cantik Level : 27%\n\nKeknya bakal susah dapet jodoh lu,, berdoa aja',
