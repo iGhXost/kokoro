@@ -11,7 +11,7 @@ Biasakan Jangan Toxic ya! :)
 `.trim(), m)
     let mentionedJid = [m.sender]
 }
-handler.customPrefix = /anjing|memek|kontol|goblok|goblog|bangsat|fuck|dick|pussy|ngentod|ngentot|ngentut|conetall/i
+handler.customPrefix = /anjing|memek|kontol|goblok|goblog|bangsat|fuck|dick|ngentod|ngentot|ngentut|conetall/i
 handler.command = new RegExp
 
 module.exports = handler
