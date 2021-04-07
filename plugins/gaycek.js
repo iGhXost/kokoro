@@ -15,7 +15,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = true
+handler.limit = false
 
 module.exports = handler
 
@@ -39,7 +39,7 @@ global.gay = [
 'Gay Level : 77%\n\nGak akan Salah Lagi dah gaynya lu',
 'Gay Level : 83%\n\nDijamin gay nya!',
 'Gay Level : 89%\n\nGay Banget!',
-'Gay Level : 94%\n\nTOBAT WOEE,, GAY LU UDH MELEWATI BATAS!😂',
+'Gay Level : 94%\n\nTOBAT WOEE, GAY LU UDH MELEWATI BATAS!😂',
 'Gay Level : 100%\n\nLU ORANG TERGAY YANG PERNAH ADA!!!',
 'Gay Level : 100%\n\nLU ORANG TERGAY YANG PERNAH ADA!!!',
 'Gay Level : 100%\n\nLU ORANG TERGAY YANG PERNAH ADA!!!',
