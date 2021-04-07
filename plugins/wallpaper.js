@@ -14,9 +14,9 @@ let handler = async (m, { conn }) => {
         throw '_*Owner belum membayar tagihan fitur ini*_'
     }
 }
-handler.help = ['wallpaperanime','wpanime']
+handler.help = ['wallpaper','wp']
 handler.tags = ['weebs']
-handler.command = /^(wallpaper|wp)anime$/i
+handler.command = /^(wallpaper|wp)$/i
 handler.premium = true
 handler.register = true
 handler.limit = true
