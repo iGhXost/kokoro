@@ -17,20 +17,20 @@ TOBAT BODO
         })
     })
 }
-handler.help = ['hentai']
-handler.tags = ['weebs']
-handler.command = /^(hentai)$/i
+handler.help = ['hentai2']
+handler.tags = ['nsfw']
+handler.command = /^(hentai2)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true
 handler.group = false
-handler.private = true
+handler.private = false
 handler.register = true
 
 handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = 10
+handler.limit = true
 
 module.exports = handler
