@@ -30,7 +30,7 @@ module.exports = {
           if (!'autolevelup' in user) user.autolevelup = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
-          limit: 20,
+          limit: 10,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
@@ -62,6 +62,7 @@ module.exports = {
       } catch (e) {
         console.log(e, global.DATABASE.data)
       }
+      if (opts['nyimak']) return
       if (!m.fromMe && opts['self']) return
       if (typeof m.text !== 'string') m.text = ''
       if (m.isBaileys) return
@@ -83,6 +84,7 @@ module.exports = {
     	for (let name in global.plugins) {
     	  let plugin = global.plugins[name]
         if (!plugin) continue
+        if (!opts['restrict']) if (plugin.tags && plugin.tags.includes('admin')) continue
         const str2Regex = str => str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
         let _prefix = plugin.customPrefix ? plugin.customPrefix : conn.prefix ? conn.prefix : global.prefix
   		  let match = (_prefix instanceof RegExp ? // RegExp Mode?
@@ -194,7 +196,7 @@ module.exports = {
               isAdmin,
               isBotAdmin,
               isPrems,
-              chatUpdate
+              chatUpdate,
             })
             if (!isPrems) m.limit = m.limit || plugin.limit || false
           } catch (e) {
@@ -297,6 +299,9 @@ module.exports = {
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
 Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+
+Untuk mematikan fitur ini, ketik
+*.enable delete*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
@@ -316,7 +321,7 @@ global.dfail = (type, m, conn) => {
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
     botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama|umur*\n\nContoh: *#daftar Kuriyama|13*'
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
   }[type]
   if (msg) return m.reply(msg)
 }
