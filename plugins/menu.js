@@ -141,7 +141,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => ''+replace[name])
-    conn.sendFile(m.chat, kuriyama, 'kuriyama.jpg', 'text.trim(),', { key: { remoteJid: '0@s.whatsapp.net', fromMe: false }, message: { conversation: 'Verified Bot by Kokoronationz' }}, m)
+    conn.sendFile(m.chat, kuriyama, 'kuriyama.jpg', text.trim(), { key: { remoteJid: '0@s.whatsapp.net', fromMe: false }, message: { conversation: 'Verified Bot by Kokoronationz' }}, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
