@@ -4,6 +4,7 @@ let levelling = require('../lib/levelling')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
+    let kuriyama = './src/kuriyama.png'
     let { exp, limit, level } = global.DATABASE.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
@@ -140,7 +141,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => ''+replace[name])
-    conn.fakeReply(m.chat, text.trim(), '0@s.whatsapp.net', `${conn.user.name} Verified Bot`, m.chat)
+    conn.sendFile(m.chat, kuriyama, 'kuriyama.jpg', 'text.trim(),', { key: { remoteJid: '0@s.whatsapp.net', fromMe: false }, message: { conversation: 'Verified Bot by Kokoronationz' }}, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
