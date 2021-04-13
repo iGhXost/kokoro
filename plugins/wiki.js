@@ -11,7 +11,7 @@ let handler = async(m, { conn, text, usedPrefix }) => {
         .catch()
 }
 handler.help = ['wiki <query>','wikipedia <query>']
-handler.tags = ['data']
+handler.tags = ['internet']
 handler.command = /^(wiki|wikipedia)$/i
 handler.owner = false
 handler.mods = false
@@ -24,5 +24,6 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
+handler.limit = true
 
 module.exports = handler
