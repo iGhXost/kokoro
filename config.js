@@ -1,4 +1,4 @@
-global.owner = ['62895361677059'] // Put your number here
+global.owner = ['+593 983897452'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
