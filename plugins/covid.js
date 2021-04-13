@@ -21,7 +21,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
   }) .catch(() => { conn.reply(m.chat, `_Masukkan nama provinsi yang benar!_`, m) })
 }
 handler.help = ['covid'].map(v => v + ' *provinsi*')
-handler.tags = ['data']
+handler.tags = ['internet']
 handler.command = /^(covid)$/i
 handler.owner = false
 handler.mods = false
